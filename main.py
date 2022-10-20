@@ -6,12 +6,12 @@ from datetime import datetime
 
 #ボタンの設置
 def f_close(event): #イベント引数
-    root.destroy
+    root.destroy()
     
 #ボタンの設
 def check_time():
     now = datetime.now()
-    s = '{0:0>2d}:{1:0>2d}:{2:0>2d}.format(now.hour,now.minute, now.sesond) '
+    s = '{0:0>2d}:{1:0>2d}:{2:0>2d}'.format(now.hour,now.minute, now.second) 
     canvas.itemconfig('mytext',text = s)
     root.after(100,check_time)
     
